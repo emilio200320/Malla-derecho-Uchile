@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Malla Interactiva Derecho U. de Chile</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Malla Interactiva</title>
+  <style>
+    .ramo {
+      border: 1px solid #444;
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+      width: 150px;
+      background-color: #f0f0f0;
+    }
+    .descripcion {
+      display: none;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-    <h1>Malla Interactiva - Derecho U. de Chile</h1>
-    <div class="malla">
-        <!-- Coloca aquí todos los botones de ramos -->
-        <button class="ramo bloqueado" data-nombre="Introducción al Derecho I">Introducción al Derecho I</button>
-        <button class="ramo bloqueado" data-nombre="Introducción al Derecho II">Introducción al Derecho II</button>
-        <button class="ramo bloqueado" data-nombre="Historia del Derecho I">Historia del Derecho I</button>
-        <button class="ramo bloqueado" data-nombre="Historia del Derecho II">Historia del Derecho II</button>
-        <button class="ramo bloqueado" data-nombre="Filosofía moral">Filosofía moral</button>
-        <button class="ramo bloqueado" data-nombre="Introducción a la Economía">Introducción a la Economía</button>
-        <button class="ramo bloqueado" data-nombre="Ingles I">Inglés I</button>
-        <button class="ramo bloqueado" data-nombre="Ingles II">Inglés II</button>
-        <button class="ramo bloqueado" data-nombre="Ingles III">Inglés III</button>
-        <button class="ramo bloqueado" data-nombre="Ingles IV">Inglés IV</button>
-        <button class="ramo bloqueado" data-nombre="Ingles V">Inglés V</button>
-        <!-- Puedes seguir agregando más botones como estos... -->
-        <!-- Usa los mismos nombres que en el script.js -->
-    </div>
+  <h1>Malla Curricular Interactiva</h1>
 
-    <script src="script.js"></script>
+  <div class="ramo" onclick="toggleDescripcion(this)">
+    Derecho Constitucional
+    <div class="descripcion">Estudia la organización del poder político, constituciones, derechos fundamentales y el sistema jurídico del Estado.</div>
+  </div>
+
+  <div class="ramo" onclick="toggleDescripcion(this)">
+    Introducción a la Economía
+    <div class="descripcion">Proporciona nociones básicas de micro y macroeconomía con enfoque jurídico.</div>
+  </div>
+
+  <script>
+    function toggleDescripcion(el) {
+      const desc = el.querySelector('.descripcion');
+      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
