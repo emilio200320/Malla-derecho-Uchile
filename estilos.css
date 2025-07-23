@@ -1,1 +1,43 @@
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #f0f8ff;
+    padding: 20px;
+    text-align: center;
+}
 
+h1 {
+    color: #003366;
+}
+
+.malla {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.ramo {
+    padding: 10px 15px;
+    background-color: #d1e0ff;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    font-size: 14px;
+    min-width: 150px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ramo.bloqueado {
+    background-color: #f2f2f2;
+    color: #999;
+    border: 2px dashed #ccc;
+    cursor: not-allowed;
+}
+
+.ramo.aprobado {
+    background-color: #ccffcc;
+    border-color: #009900;
+    color: #006600;
+    font-weight: bold;
+}
